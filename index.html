@@ -8,67 +8,119 @@
   </head>
   <body>
     <div class="page-glow" aria-hidden="true"></div>
+
     <header class="site-header">
       <nav class="nav" aria-label="主导航">
-        <a class="brand" href="#">
+        <a class="brand" href="#home" data-scroll-target="home">
           <span class="brand-mark" aria-hidden="true"></span>
           AI Tools Demo
         </a>
         <div class="nav-links">
-          <a href="#tools">工具</a>
-          <a href="#pricing">价格</a>
-          <a href="#experience">体验</a>
-          <a href="#about">关于</a>
+          <a href="#home" data-scroll-target="home">首页</a>
+          <a href="#products" data-scroll-target="products">产品</a>
+          <a href="#pricing" data-scroll-target="pricing">价格</a>
+          <a href="#request" data-scroll-target="request">提交需求</a>
+          <a href="#faq" data-scroll-target="faq">FAQ</a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero" id="experience">
+      <section class="hero" id="home">
         <div class="hero-content">
-          <p class="eyebrow">AI Tool Directory</p>
-          <h1>AI Tools Demo</h1>
-          <p class="intro">一个用于测试上线流程的 AI 工具导航网站</p>
-          <button class="primary-button" type="button" id="tryButton">
-            <span>立即体验</span>
-            <span aria-hidden="true">→</span>
-          </button>
+          <p class="eyebrow">AI Product Demo</p>
+          <h1>用 AI 提升你的工作效率</h1>
+          <p class="intro">这是一个用于测试上线流程的虚拟 AI 工具产品站</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-scroll-target="products">
+              <span>查看产品</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <button class="secondary-button" type="button" data-scroll-target="request">
+              提交需求
+            </button>
+          </div>
         </div>
+
         <div class="hero-panel" aria-hidden="true">
+          <div class="panel-status">
+            <span></span>
+            Demo Flow Online
+          </div>
           <div class="panel-line"></div>
           <div class="panel-line short"></div>
           <div class="panel-grid">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <span>Writing</span>
+            <span>Images</span>
+            <span>Pages</span>
+            <span>Forms</span>
           </div>
         </div>
       </section>
 
-      <section class="tools-section" id="tools" aria-labelledby="tools-title">
+      <section class="products-section" id="products" aria-labelledby="products-title">
         <div class="section-heading">
-          <p class="eyebrow">精选工具</p>
-          <h2 id="tools-title">快速探索 AI 能力</h2>
+          <p class="eyebrow">Products</p>
+          <h2 id="products-title">虚拟 AI 产品矩阵</h2>
+          <p>所有产品均为 Demo 展示，用于验证产品站上线流程。</p>
         </div>
 
-        <div class="tool-grid">
-          <article class="tool-card">
+        <div class="product-grid">
+          <article class="product-card">
             <div class="tool-icon" aria-hidden="true">W</div>
             <h3>AI 写作助手</h3>
-            <p>用于生成短文、标题和营销文案的测试入口。</p>
+            <p>帮助快速生成文章、文案、标题。</p>
+            <div class="tag-list">
+              <span>文章草稿</span>
+              <span>标题生成</span>
+              <span>文案优化</span>
+            </div>
+            <button
+              class="ghost-button detail-button"
+              type="button"
+              data-product="AI 写作助手"
+              data-detail="AI 写作助手是一个虚拟写作工具 Demo，可模拟文章生成、标题创作和文案优化流程，适合展示内容生产类 AI 产品的核心体验。"
+            >
+              查看详情
+            </button>
           </article>
 
-          <article class="tool-card">
+          <article class="product-card">
             <div class="tool-icon" aria-hidden="true">I</div>
             <h3>AI 图片生成器</h3>
-            <p>用于展示图片创意生成流程的占位工具。</p>
+            <p>根据文字生成创意图片。</p>
+            <div class="tag-list">
+              <span>提示词生成</span>
+              <span>创意草图</span>
+              <span>风格预览</span>
+            </div>
+            <button
+              class="ghost-button detail-button"
+              type="button"
+              data-product="AI 图片生成器"
+              data-detail="AI 图片生成器是一个虚拟图像工具 Demo，可模拟通过文字描述生成图片概念、风格方向和视觉草稿的流程。"
+            >
+              查看详情
+            </button>
           </article>
 
-          <article class="tool-card">
+          <article class="product-card">
             <div class="tool-icon" aria-hidden="true">P</div>
             <h3>AI 网页生成器</h3>
-            <p>用于模拟从需求到页面原型的生成体验。</p>
+            <p>快速生成网站页面和落地页。</p>
+            <div class="tag-list">
+              <span>页面结构</span>
+              <span>落地页文案</span>
+              <span>组件建议</span>
+            </div>
+            <button
+              class="ghost-button detail-button"
+              type="button"
+              data-product="AI 网页生成器"
+              data-detail="AI 网页生成器是一个虚拟建站工具 Demo，可模拟从需求描述到页面结构、落地页文案和组件建议的生成过程。"
+            >
+              查看详情
+            </button>
           </article>
         </div>
       </section>
@@ -77,37 +129,163 @@
         <div class="section-heading">
           <p class="eyebrow">Pricing</p>
           <h2 id="pricing-title">选择适合你的 AI 产品套餐</h2>
+          <p>价格仅用于 Demo 展示，不接入真实支付。</p>
         </div>
 
         <div class="pricing-grid">
           <article class="pricing-card">
             <p class="plan-label">Basic Plan</p>
-            <h3>¥19.9</h3>
+            <h3>¥19.9 <span>/ 月</span></h3>
             <p class="plan-desc">适合个人体验</p>
-            <button class="buy-button" type="button">立即购买</button>
+            <ul>
+              <li>基础 AI 工具体验</li>
+              <li>每日 Demo 使用额度</li>
+              <li>基础模板展示</li>
+              <li>表单需求记录演示</li>
+            </ul>
+            <button class="buy-button" type="button" data-plan="Basic Plan">
+              选择套餐
+            </button>
           </article>
 
           <article class="pricing-card featured-plan">
             <p class="plan-badge">Popular</p>
             <p class="plan-label">Pro Plan</p>
-            <h3>¥49.9</h3>
+            <h3>¥49.9 <span>/ 月</span></h3>
             <p class="plan-desc">适合内容创作者</p>
-            <button class="buy-button" type="button">立即购买</button>
+            <ul>
+              <li>写作与图片工具演示</li>
+              <li>更多 Demo 生成额度</li>
+              <li>创作者模板展示</li>
+              <li>优先需求反馈演示</li>
+            </ul>
+            <button class="buy-button" type="button" data-plan="Pro Plan">
+              选择套餐
+            </button>
           </article>
 
           <article class="pricing-card">
             <p class="plan-label">Business Plan</p>
-            <h3>¥99.9</h3>
-            <p class="plan-desc">适合团队使用</p>
-            <button class="buy-button" type="button">立即购买</button>
+            <h3>¥99.9 <span>/ 月</span></h3>
+            <p class="plan-desc">适合小团队</p>
+            <ul>
+              <li>团队产品流程展示</li>
+              <li>网页生成工具演示</li>
+              <li>多场景模板展示</li>
+              <li>团队需求收集演示</li>
+            </ul>
+            <button class="buy-button" type="button" data-plan="Business Plan">
+              选择套餐
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="request-section" id="request" aria-labelledby="request-title">
+        <div class="section-heading">
+          <p class="eyebrow">Request</p>
+          <h2 id="request-title">提交你的 Demo 需求</h2>
+          <p>该表单不会发送到真实后台，仅用于测试交互流程。</p>
+        </div>
+
+        <form class="request-form" id="requestForm" novalidate>
+          <div class="form-grid">
+            <label>
+              昵称
+              <input id="nickname" name="nickname" type="text" placeholder="请输入昵称" />
+            </label>
+
+            <label>
+              选择套餐
+              <input id="selectedPlan" name="selectedPlan" type="text" placeholder="请选择套餐" readonly />
+            </label>
+
+            <label>
+              需求类型
+              <select id="requestType" name="requestType">
+                <option value="">请选择需求类型</option>
+                <option value="写作工具">写作工具</option>
+                <option value="图片工具">图片工具</option>
+                <option value="网页工具">网页工具</option>
+                <option value="其他">其他</option>
+              </select>
+            </label>
+
+            <label>
+              联系方式（可选）
+              <input id="contact" name="contact" type="text" placeholder="可留空" />
+            </label>
+          </div>
+
+          <label>
+            需求说明
+            <textarea id="requestDetail" name="requestDetail" rows="5" placeholder="请简单描述你的 Demo 需求"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="primary-button" type="submit">提交表单</button>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">常见问题</h2>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <button type="button" class="faq-question">
+              这个网站是真实产品吗？
+              <span aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer">不是。这个网站是虚拟 AI 产品展示 Demo，用于测试网站上线流程。</p>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question">
+              是否已经接入支付？
+              <span aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer">没有。所有套餐和按钮都是 Demo 展示，不会触发真实支付。</p>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question">
+              提交表单后会有人联系我吗？
+              <span aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer">不会。表单不会发送到真实后台，也不会保存或转发任何信息。</p>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question">
+              后续可以升级成真实网站吗？
+              <span aria-hidden="true">+</span>
+            </button>
+            <p class="faq-answer">可以。后续可以接入真实后台、支付、用户系统和数据存储。</p>
           </article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer" id="about">
-      Demo Website Only
+    <footer class="site-footer">
+      <strong>AI Tools Demo</strong>
+      <span>Demo Website Only</span>
+      <span>No real payment, no real personal data</span>
     </footer>
+
+    <div class="modal" id="productModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="关闭弹窗" data-close-modal>×</button>
+        <p class="eyebrow">Product Detail</p>
+        <h2 id="modalTitle">产品详情</h2>
+        <p id="modalText"></p>
+      </section>
+    </div>
 
     <script src="script.js"></script>
   </body>
