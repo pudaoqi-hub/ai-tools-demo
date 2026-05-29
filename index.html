@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="AI Tools Demo 是一个用于学习和测试上线流程的虚拟 AI 产品展示网站。"
+      content="AI Efficiency Studio 是一个用于练习交付流程的虚拟 AI 效率服务网站，包含产品、价格、需求提交和本地 Demo 后台。"
     />
-    <title>AI Tools Demo | 虚拟 AI 产品展示站</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>AI Efficiency Studio | AI 效率服务 Demo</title>
+    <link rel="stylesheet" href="style.css?v=20260529" />
   </head>
   <body>
     <div class="page-glow" aria-hidden="true"></div>
@@ -17,7 +17,7 @@
       <nav class="nav" aria-label="主导航">
         <a class="brand" href="index.html">
           <span class="brand-mark" aria-hidden="true"></span>
-          AI Tools Demo
+          AI Efficiency Studio
         </a>
         <div class="nav-links">
           <a href="index.html">首页</a>
@@ -25,6 +25,7 @@
           <a href="pricing.html">价格</a>
           <a href="#request" data-scroll-target="request">提交需求</a>
           <a href="admin.html">Demo 后台</a>
+          <a href="#about" data-scroll-target="about">关于我们</a>
           <a href="privacy.html">隐私</a>
           <a href="terms.html">条款</a>
         </div>
@@ -34,9 +35,9 @@
     <main>
       <section class="hero" id="home">
         <div class="hero-content">
-          <p class="eyebrow">AI Product Demo</p>
-          <h1>用 AI 提升你的工作效率</h1>
-          <p class="intro">这是一个用于测试上线流程的虚拟 AI 工具产品站</p>
+          <p class="eyebrow">AI Efficiency Service</p>
+          <h1>为内容、设计与网页工作流提速</h1>
+          <p class="intro">AI Efficiency Studio 是一个虚拟 AI 效率服务网站，用于展示从产品介绍、套餐选择到需求提交和 Demo 后台管理的完整流程。</p>
           <div class="hero-actions">
             <a class="primary-button" href="product.html">
               <span>查看产品</span>
@@ -57,10 +58,10 @@
           <div class="panel-line"></div>
           <div class="panel-line short"></div>
           <div class="panel-grid">
-            <span>Writing</span>
-            <span>Images</span>
-            <span>Pages</span>
-            <span>Forms</span>
+            <span>Content</span>
+            <span>Creative</span>
+            <span>Web</span>
+            <span>Requests</span>
           </div>
         </div>
       </section>
@@ -69,14 +70,14 @@
         <div class="section-heading">
           <p class="eyebrow">Products</p>
           <h2 id="products-title">虚拟 AI 产品矩阵</h2>
-          <p>所有产品均为 Demo 展示，用于验证产品站上线流程。</p>
+          <p>围绕写作、图像和网页生成构建的虚拟服务矩阵，用于练习完整交付链路。</p>
         </div>
 
         <div class="product-grid">
           <article class="product-card">
             <div class="tool-icon" aria-hidden="true">W</div>
             <h3>AI 写作助手</h3>
-            <p>帮助快速生成文章、文案、标题。</p>
+            <p>帮助团队快速生成文章、文案、标题和内容草稿。</p>
             <div class="tag-list">
               <span>文章草稿</span>
               <span>标题生成</span>
@@ -86,7 +87,7 @@
               class="ghost-button detail-button"
               type="button"
               data-product="AI 写作助手"
-              data-detail="AI 写作助手是一个虚拟写作工具 Demo，可模拟文章生成、标题创作和文案优化流程，适合展示内容生产类 AI 产品的核心体验。"
+              data-detail="AI 写作助手用于模拟内容生产工作流，可覆盖文章草稿、标题创作、文案优化和摘要提炼，适合内容团队练习 AI 服务交付。"
             >
               查看详情
             </button>
@@ -95,7 +96,7 @@
           <article class="product-card">
             <div class="tool-icon" aria-hidden="true">I</div>
             <h3>AI 图片生成器</h3>
-            <p>根据文字生成创意图片。</p>
+            <p>根据文字描述模拟生成创意视觉方向和图片方案。</p>
             <div class="tag-list">
               <span>提示词生成</span>
               <span>创意草图</span>
@@ -105,7 +106,7 @@
               class="ghost-button detail-button"
               type="button"
               data-product="AI 图片生成器"
-              data-detail="AI 图片生成器是一个虚拟图像工具 Demo，可模拟通过文字描述生成图片概念、风格方向和视觉草稿的流程。"
+              data-detail="AI 图片生成器用于模拟视觉创意工作流，可根据文字描述生成概念方向、风格提示和图片草稿说明，不接入真实生成服务。"
             >
               查看详情
             </button>
@@ -114,7 +115,7 @@
           <article class="product-card">
             <div class="tool-icon" aria-hidden="true">P</div>
             <h3>AI 网页生成器</h3>
-            <p>快速生成网站页面和落地页。</p>
+            <p>快速规划网站页面、落地页结构和组件内容。</p>
             <div class="tag-list">
               <span>页面结构</span>
               <span>落地页文案</span>
@@ -124,7 +125,7 @@
               class="ghost-button detail-button"
               type="button"
               data-product="AI 网页生成器"
-              data-detail="AI 网页生成器是一个虚拟建站工具 Demo，可模拟从需求描述到页面结构、落地页文案和组件建议的生成过程。"
+              data-detail="AI 网页生成器用于模拟从需求描述到页面结构、落地页文案和组件建议的生成过程，适合作为网站交付流程 Demo。"
             >
               查看详情
             </button>
@@ -198,13 +199,13 @@
         <form class="request-form" id="requestForm" novalidate>
           <div class="form-grid">
             <label>
-              昵称
-              <input id="nickname" name="nickname" type="text" placeholder="请输入昵称" />
+              姓名
+              <input id="name" name="name" type="text" placeholder="请输入姓名" />
             </label>
 
             <label>
-              选择套餐
-              <input id="selectedPlan" name="selectedPlan" type="text" placeholder="请选择套餐" readonly />
+              联系方式
+              <input id="contact" name="contact" type="text" placeholder="示例：example@example.com" />
             </label>
 
             <label>
@@ -219,14 +220,25 @@
             </label>
 
             <label>
-              联系方式（可选）
-              <input id="contact" name="contact" type="text" placeholder="可留空" />
+              预算
+              <select id="budget" name="budget">
+                <option value="">请选择预算</option>
+                <option value="¥500 以下">¥500 以下</option>
+                <option value="¥500 - ¥2000">¥500 - ¥2000</option>
+                <option value="¥2000 - ¥5000">¥2000 - ¥5000</option>
+                <option value="¥5000 以上">¥5000 以上</option>
+              </select>
+            </label>
+
+            <label>
+              选择套餐
+              <input id="selectedPlan" name="selectedPlan" type="text" placeholder="请选择套餐" readonly />
             </label>
           </div>
 
           <label>
-            需求说明
-            <textarea id="requestDetail" name="requestDetail" rows="5" placeholder="请简单描述你的 Demo 需求"></textarea>
+            备注
+            <textarea id="notes" name="notes" rows="5" placeholder="请简单描述你的需求、目标或想测试的功能"></textarea>
           </label>
 
           <div class="form-actions">
@@ -234,6 +246,30 @@
             <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
           </div>
         </form>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">关于我们</h2>
+          <p>AI Efficiency Studio 是一个练习用 Demo 项目，用来展示现代 AI 服务网站的产品介绍、套餐选择、需求提交和本地后台管理流程。</p>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>服务定位</h3>
+            <p>面向内容、视觉和网页工作流的虚拟 AI 效率服务展示站。</p>
+          </article>
+          <article class="info-card">
+            <h3>联系方式</h3>
+            <p>邮箱：example@example.com</p>
+            <p>微信：your-wechat-id</p>
+          </article>
+          <article class="info-card">
+            <h3>Demo 声明</h3>
+            <p>本站不接入真实支付、真实数据库或真实邮箱服务，数据仅保存于本地浏览器 localStorage。</p>
+          </article>
+        </div>
       </section>
 
       <section class="faq-section" id="faq" aria-labelledby="faq-title">
@@ -262,7 +298,7 @@
               提交表单后会有人联系我吗？
               <span aria-hidden="true">+</span>
             </button>
-            <p class="faq-answer">不会。表单不会发送到真实后台，也不会保存或转发任何信息。</p>
+            <p class="faq-answer">不会。表单仅保存到当前浏览器的 localStorage，方便 Demo 后台展示，不会发送到真实服务器。</p>
           </article>
           <article class="faq-item">
             <button type="button" class="faq-question">
@@ -276,7 +312,7 @@
     </main>
 
     <footer class="site-footer">
-      <strong>AI Tools Demo</strong>
+      <strong>AI Efficiency Studio</strong>
       <span>Demo Website Only</span>
       <span>No real payment, no real personal data</span>
     </footer>
@@ -291,6 +327,6 @@
       </section>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260529"></script>
   </body>
 </html>

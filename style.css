@@ -130,6 +130,7 @@ main,
 .products-section,
 .pricing-section,
 .request-section,
+.about-section,
 .faq-section,
 .page-hero,
 .detail-section,
@@ -273,6 +274,7 @@ h3 {
 .faq-item,
 .modal-panel,
 .detail-card,
+.info-card,
 .stat-card,
 .admin-card,
 .success-panel,
@@ -349,6 +351,7 @@ h3 {
 .products-section,
 .pricing-section,
 .request-section,
+.about-section,
 .faq-section,
 .detail-section,
 .admin-section {
@@ -380,7 +383,8 @@ h3 {
 }
 
 .product-grid,
-.pricing-grid {
+.pricing-grid,
+.info-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
@@ -397,6 +401,7 @@ h3 {
 .product-card:hover,
 .pricing-card:hover,
 .detail-card:hover,
+.info-card:hover,
 .admin-card:hover,
 .stat-card:hover {
   transform: translateY(-4px);
@@ -428,6 +433,22 @@ h3 {
 .detail-grid p {
   color: var(--muted);
   line-height: 1.6;
+}
+
+.info-card {
+  min-height: 210px;
+  padding: 30px;
+}
+
+.info-card h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.info-card p {
+  margin-bottom: 10px;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .detail-grid {
@@ -760,7 +781,27 @@ textarea::placeholder {
 }
 
 .admin-card {
+  min-width: 0;
   padding: 30px;
+}
+
+.admin-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.admin-card-header h2 {
+  margin-bottom: 0;
+}
+
+.small-button {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  flex: 0 0 auto;
 }
 
 .progress-row {
@@ -810,6 +851,53 @@ textarea::placeholder {
 .fake-list em {
   color: #1d1d1f;
   font-style: normal;
+}
+
+.request-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.request-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.request-table th,
+.request-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.request-table th {
+  color: #1d1d1f;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.request-table td {
+  line-height: 1.5;
+}
+
+.empty-state {
+  margin: 18px 0 0;
+  padding: 18px;
+  border: 1px dashed rgba(0, 113, 227, 0.24);
+  border-radius: 18px;
+  color: var(--muted);
+  background: #f7fbff;
+  line-height: 1.6;
+}
+
+.empty-state[hidden] {
+  display: none;
 }
 
 .modal {
@@ -914,6 +1002,7 @@ textarea::placeholder {
 
   .product-grid,
   .pricing-grid,
+  .info-grid,
   .form-grid,
   .detail-grid,
   .stats-grid,
@@ -924,6 +1013,7 @@ textarea::placeholder {
   .products-section,
   .pricing-section,
   .request-section,
+  .about-section,
   .faq-section,
   .detail-section,
   .admin-section {
@@ -946,6 +1036,85 @@ textarea::placeholder {
   .progress-row {
     grid-template-columns: 1fr;
   }
+
+  .admin-card-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .small-button {
+    width: 100%;
+  }
+
+  .request-table {
+    min-width: 0;
+  }
+
+  .request-table thead {
+    display: none;
+  }
+
+  .request-table,
+  .request-table tbody,
+  .request-table tr,
+  .request-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .request-table tr {
+    margin-bottom: 14px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface-soft);
+  }
+
+  .request-table td {
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+    word-break: break-word;
+  }
+
+  .request-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .request-table td::before {
+    color: #1d1d1f;
+    font-weight: 800;
+  }
+
+  .request-table td:nth-child(1)::before {
+    content: "时间";
+  }
+
+  .request-table td:nth-child(2)::before {
+    content: "姓名";
+  }
+
+  .request-table td:nth-child(3)::before {
+    content: "联系";
+  }
+
+  .request-table td:nth-child(4)::before {
+    content: "类型";
+  }
+
+  .request-table td:nth-child(5)::before {
+    content: "预算";
+  }
+
+  .request-table td:nth-child(6)::before {
+    content: "套餐";
+  }
+
+  .request-table td:nth-child(7)::before {
+    content: "备注";
+  }
 }
 
 @media (max-width: 460px) {
@@ -953,6 +1122,7 @@ textarea::placeholder {
   .products-section,
   .pricing-section,
   .request-section,
+  .about-section,
   .faq-section,
   .page-hero,
   .detail-section,
@@ -976,6 +1146,7 @@ textarea::placeholder {
   .product-card,
   .pricing-card,
   .detail-card,
+  .info-card,
   .request-form,
   .success-panel,
   .text-panel,
