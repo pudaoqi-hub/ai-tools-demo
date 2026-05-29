@@ -155,7 +155,8 @@ h1 {
   line-height: 1.7;
 }
 
-.primary-button {
+.primary-button,
+.buy-button {
   min-height: 48px;
   padding: 0 24px;
   border: 0;
@@ -173,13 +174,15 @@ h1 {
   transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
-.primary-button:hover {
+.primary-button:hover,
+.buy-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 24px 64px rgba(70, 183, 255, 0.32);
   filter: saturate(1.12);
 }
 
-.primary-button:active {
+.primary-button:active,
+.buy-button:active {
   transform: translateY(-1px) scale(0.99);
 }
 
@@ -310,6 +313,87 @@ h1 {
   line-height: 1.7;
 }
 
+.pricing-section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 0 0 92px;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pricing-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 286px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at top right, rgba(70, 183, 255, 0.12), transparent 12rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.032)),
+    var(--surface);
+  box-shadow: 0 24px 76px rgba(0, 0, 0, 0.28);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(70, 183, 255, 0.34);
+  box-shadow: 0 36px 96px rgba(0, 0, 0, 0.4);
+}
+
+.featured-plan {
+  border-color: rgba(54, 242, 178, 0.38);
+  background:
+    radial-gradient(circle at top right, rgba(54, 242, 178, 0.22), transparent 13rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+    var(--surface);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  margin: 0;
+  padding: 6px 10px;
+  border: 1px solid rgba(54, 242, 178, 0.36);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  background: rgba(54, 242, 178, 0.1);
+}
+
+.plan-label {
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.pricing-card h3 {
+  margin-bottom: 14px;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.plan-desc {
+  min-height: 54px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.buy-button {
+  width: 100%;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 28px 16px;
@@ -359,5 +443,13 @@ h1 {
 
   .tool-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-section {
+    padding-bottom: 68px;
   }
 }
