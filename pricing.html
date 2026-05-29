@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI Tools Demo 价格页，展示 Basic、Pro、Business 三个虚拟套餐。" />
+    <title>价格套餐 | AI Tools Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>AI Tools Demo</a>
+        <div class="nav-links">
+          <a href="index.html">首页</a>
+          <a href="product.html">产品</a>
+          <a href="pricing.html">价格</a>
+          <a href="index.html#request">提交需求</a>
+          <a href="admin.html">Demo 后台</a>
+          <a href="privacy.html">隐私</a>
+          <a href="terms.html">条款</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Pricing</p>
+        <h1>虚拟套餐价格</h1>
+        <p class="intro">价格和权益仅用于界面演示，不接真实支付，不构成真实交易。</p>
+      </section>
+
+      <section class="pricing-section compact-section">
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <p class="plan-label">Basic Plan</p>
+            <h3>¥19.9 <span>/ 月</span></h3>
+            <p class="plan-desc">适合个人体验</p>
+            <ul>
+              <li>基础 AI 工具体验</li>
+              <li>每日 Demo 使用额度</li>
+              <li>基础模板展示</li>
+              <li>表单需求记录演示</li>
+            </ul>
+            <a class="buy-button" href="index.html#request" data-plan-link="Basic Plan">选择套餐</a>
+          </article>
+
+          <article class="pricing-card featured-plan">
+            <p class="plan-badge">推荐</p>
+            <p class="plan-label">Pro Plan</p>
+            <h3>¥49.9 <span>/ 月</span></h3>
+            <p class="plan-desc">适合内容创作者</p>
+            <ul>
+              <li>写作与图片工具演示</li>
+              <li>更多 Demo 生成额度</li>
+              <li>创作者模板展示</li>
+              <li>优先需求反馈演示</li>
+            </ul>
+            <a class="buy-button" href="index.html#request" data-plan-link="Pro Plan">选择套餐</a>
+          </article>
+
+          <article class="pricing-card">
+            <p class="plan-label">Business Plan</p>
+            <h3>¥99.9 <span>/ 月</span></h3>
+            <p class="plan-desc">适合小团队</p>
+            <ul>
+              <li>团队产品流程展示</li>
+              <li>网页生成工具演示</li>
+              <li>多场景模板展示</li>
+              <li>团队需求收集演示</li>
+            </ul>
+            <a class="buy-button" href="index.html#request" data-plan-link="Business Plan">选择套餐</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>AI Tools Demo</strong><span>Demo Website Only</span><span>No real payment, no real personal data</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

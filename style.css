@@ -140,7 +140,10 @@ main,
 .products-section,
 .pricing-section,
 .request-section,
-.faq-section {
+.faq-section,
+.page-hero,
+.detail-section,
+.admin-section {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   scroll-margin-top: 96px;
@@ -267,7 +270,12 @@ h2 {
 .pricing-card,
 .request-form,
 .faq-item,
-.modal-panel {
+.modal-panel,
+.detail-card,
+.stat-card,
+.admin-card,
+.success-panel,
+.text-panel {
   border: 1px solid var(--line);
   border-radius: 8px;
   background:
@@ -342,8 +350,22 @@ h2 {
 .products-section,
 .pricing-section,
 .request-section,
-.faq-section {
+.faq-section,
+.detail-section,
+.admin-section {
   padding: 36px 0 84px;
+}
+
+.page-hero {
+  padding: 86px 0 28px;
+}
+
+.page-hero h1 {
+  max-width: 860px;
+}
+
+.compact-section {
+  padding-top: 18px;
 }
 
 .section-heading {
@@ -399,6 +421,45 @@ h2 {
 .pricing-card > * {
   position: relative;
   z-index: 1;
+}
+
+.detail-section {
+  display: grid;
+  gap: 18px;
+}
+
+.detail-card {
+  padding: 28px;
+}
+
+.detail-card h2 {
+  margin-bottom: 12px;
+}
+
+.detail-card p,
+.detail-grid p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.detail-grid div {
+  min-height: 130px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.detail-grid h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .tool-icon {
@@ -646,6 +707,115 @@ textarea::placeholder {
   color: var(--text);
 }
 
+.center-page,
+.text-page {
+  position: relative;
+  z-index: 1;
+  width: min(900px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  padding: 48px 0;
+}
+
+.success-panel,
+.text-panel {
+  padding: 34px;
+}
+
+.success-panel h1,
+.text-panel h1 {
+  font-size: clamp(36px, 6vw, 64px);
+}
+
+.text-panel p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.stat-card {
+  padding: 24px;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 46px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 18px;
+}
+
+.admin-card {
+  padding: 26px;
+}
+
+.progress-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 48px;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.progress-row div {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.progress-row i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+}
+
+.fake-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.fake-list li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.fake-list b,
+.fake-list em {
+  color: var(--text);
+  font-style: normal;
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -747,15 +917,24 @@ textarea::placeholder {
 
   .product-grid,
   .pricing-grid,
-  .form-grid {
+  .form-grid,
+  .detail-grid,
+  .stats-grid,
+  .admin-grid {
     grid-template-columns: 1fr;
   }
 
   .products-section,
   .pricing-section,
   .request-section,
-  .faq-section {
+  .faq-section,
+  .detail-section,
+  .admin-section {
     padding: 32px 0 64px;
+  }
+
+  .page-hero {
+    padding-top: 54px;
   }
 
   .pricing-card {
@@ -765,6 +944,11 @@ textarea::placeholder {
   .request-form {
     padding: 22px;
   }
+
+  .fake-list li,
+  .progress-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 460px) {
@@ -773,6 +957,9 @@ textarea::placeholder {
   .pricing-section,
   .request-section,
   .faq-section,
+  .page-hero,
+  .detail-section,
+  .admin-section,
   .nav {
     width: min(100% - 24px, 1120px);
   }

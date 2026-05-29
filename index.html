@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Tools Demo</title>
+    <meta
+      name="description"
+      content="AI Tools Demo 是一个用于学习和测试上线流程的虚拟 AI 产品展示网站。"
+    />
+    <title>AI Tools Demo | 虚拟 AI 产品展示站</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,16 +15,18 @@
 
     <header class="site-header">
       <nav class="nav" aria-label="主导航">
-        <a class="brand" href="#home" data-scroll-target="home">
+        <a class="brand" href="index.html">
           <span class="brand-mark" aria-hidden="true"></span>
           AI Tools Demo
         </a>
         <div class="nav-links">
-          <a href="#home" data-scroll-target="home">首页</a>
-          <a href="#products" data-scroll-target="products">产品</a>
-          <a href="#pricing" data-scroll-target="pricing">价格</a>
+          <a href="index.html">首页</a>
+          <a href="product.html">产品</a>
+          <a href="pricing.html">价格</a>
           <a href="#request" data-scroll-target="request">提交需求</a>
-          <a href="#faq" data-scroll-target="faq">FAQ</a>
+          <a href="admin.html">Demo 后台</a>
+          <a href="privacy.html">隐私</a>
+          <a href="terms.html">条款</a>
         </div>
       </nav>
     </header>
@@ -32,10 +38,11 @@
           <h1>用 AI 提升你的工作效率</h1>
           <p class="intro">这是一个用于测试上线流程的虚拟 AI 工具产品站</p>
           <div class="hero-actions">
-            <button class="primary-button" type="button" data-scroll-target="products">
+            <a class="primary-button" href="product.html">
               <span>查看产品</span>
               <span aria-hidden="true">→</span>
-            </button>
+            </a>
+            <a class="secondary-button" href="pricing.html">查看价格</a>
             <button class="secondary-button" type="button" data-scroll-target="request">
               提交需求
             </button>
@@ -243,7 +250,6 @@
             </button>
             <p class="faq-answer">不是。这个网站是虚拟 AI 产品展示 Demo，用于测试网站上线流程。</p>
           </article>
-
           <article class="faq-item">
             <button type="button" class="faq-question">
               是否已经接入支付？
@@ -251,7 +257,6 @@
             </button>
             <p class="faq-answer">没有。所有套餐和按钮都是 Demo 展示，不会触发真实支付。</p>
           </article>
-
           <article class="faq-item">
             <button type="button" class="faq-question">
               提交表单后会有人联系我吗？
@@ -259,7 +264,6 @@
             </button>
             <p class="faq-answer">不会。表单不会发送到真实后台，也不会保存或转发任何信息。</p>
           </article>
-
           <article class="faq-item">
             <button type="button" class="faq-question">
               后续可以升级成真实网站吗？
